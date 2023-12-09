@@ -91,29 +91,122 @@ hr {
 }
 
 .courses {
-    display: flex;
-    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
 }
 
-.course .course-bennar img {
+.course {
+    width: 252.423px;
+    height: 269.786px;
+}
+
+.course-bennar img {
     width: 224px;
     height: 104px;
 }
 
-.course-info {
-    display: flex;
-    column-gap: 20px;
+.course-info a {
+    text-decoration: none;
+    color: #ED6B4F;
 }
 
-.course-details .course-auother a {
-    color: #ED6B4F;
-    text-decoration: none;
+.course-details {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+
+}
+
+
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+}
+
+.rating p {
+    color: #A2A2A2;
 }
 
 .time {
     width: 94.826px;
     height: 29.383px;
-    border-radius: 14.691px;
-    background: #FEE5DF;
     text-align: center;
+    border-radius: 14.691px;
+    color: #ED6B4F;
+    background: #FEE5DF;
 }
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .section-titel {
+        text-align: center;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-info {
+        text-align: center;
+    }
+
+    .course {
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .section-titel {
+        text-align: center;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-info {
+        text-align: center;
+    }
+
+    .course {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+
+@media only screen and (min-width:688px) and (max-width:992px) {}
